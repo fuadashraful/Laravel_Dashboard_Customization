@@ -48,10 +48,10 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li>
-            <a href="">
+          <li class="{{'show_products'==request()->path()?'active':''}}">
+            <a href="{{route('products')}}">
               <i class="now-ui-icons education_atom"></i>
-              <p>Icons</p>
+              <p>Products</p>
             </a>
           </li>
           <li>

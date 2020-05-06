@@ -36,4 +36,8 @@ Route::group(['middleware'=>['auth','admin']],function(){
 	Route::get('edit_user/{id}', ['as' => 'admin.edit_user', 'uses' => 'admin\AdminController@edit_user']);
 	Route::put('edit_user/{id}', ['as' => 'admin.edit_user', 'uses' => 'admin\AdminController@edit_user_put']);
 	Route::delete('delete_user/{id}', ['as' => 'admin.delete_user', 'uses' => 'admin\AdminController@delete_user']);
+
+	Route::get('show_products/','admin\ProductController@index')->name('products');
+	Route::get('create_product/','admin\ProductController@create')->name('create_product');
+	Route::post('store_product/','admin\ProductController@store')->name('store_product');
 });
